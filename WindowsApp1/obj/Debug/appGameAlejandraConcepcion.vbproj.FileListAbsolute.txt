@@ -10,3 +10,4 @@ C:\Users\susan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\appGameAlejandraCo
 C:\Users\susan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
 C:\Users\susan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
 C:\Users\susan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\susan\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form2.resources
