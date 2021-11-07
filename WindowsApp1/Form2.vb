@@ -10,7 +10,9 @@
     End Sub
 
     Private Sub Finish(sender As Object, e As EventArgs) Handles LabelFinish.MouseEnter
+        'El timer para'
         Timer1.Stop()
+
         Dim v As Integer
         v = 500 - y
         User(i - 1).points = v
@@ -25,8 +27,9 @@
         Next l
         LabelBest.Text = Mayor
 
-        'El siguiente usuario debe tener el mismo nombre si finializa y desea jugar'
+        'Si el usuario desea jugar nuevamente debe tener el mismo nombre que el anterior user'
         User(i).nombre = User(i - 1).nombre
+
         'agregar a la tabla de puntuaciones'
         rangking.Items.Add(User(i - 1).nombre)
         rangking.Items.Add(User(i - 1).points)
@@ -34,13 +37,17 @@
 
         Dim dialogResult1 = MessageBox.Show("FELICIDADES, LO HAS LOGRADO " + Chr(13) + Chr(10) + "Tiempo:" + CStr(y))
         y = 0
+        'inicia el timer'
         Timer1.Start()
         i = i + 1
     End Sub
     Private Sub Start()
+        'Devuelve el cursor a la localización de Panel1'
         Dim StartPoint = Panel1.Location
         StartPoint.Offset(10, 10)
         Cursor.Position = PointToScreen(StartPoint)
+
+        'Comienza el conteo del rejoj'
         Timer1.Interval = 1000
         Timer1.Start()
     End Sub
@@ -50,6 +57,7 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        'Conteo para el timer'
         y = y + 1
         Tiempo1.Text = y
     End Sub
